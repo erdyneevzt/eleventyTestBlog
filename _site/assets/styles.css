@@ -1,0 +1,108 @@
+.logo-container {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px; /* Gap from above */
+}
+
+.logo{
+	max-width:150px; /* Size of logo */
+	height: auto;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: center;
+	gap: 20px; 		/* Distance between buttons */
+	margin-top: 10px;	/* Gap under logo */
+}
+
+.nav-links a {
+	text-decoration: none;  		/* Removes underline */
+	color: #333; 				/* Color of buttons */ 
+	font-family: 'Roboto', sans-serif; 	/* Font for buttons */
+	font-size: 18px; 			/* Size of buttons*/
+	font-weight: bold; 			/* Fat */
+	padding: 10px 20px; 			/* Internal gaps for button type*/
+	border: 2px solid #333; 		/* Frame of button */ 
+	border-radius: 5px; 			/* Rounding corners */
+	background-color: transparent; 		/* Transparent background */
+	transition: all 0.3s ease; 		/* Animation while aiming*/
+}
+
+/*
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;  	
+}
+*/
+
+.post-block {
+  margin-bottom: 20px;
+  text-align: Left;
+}
+
+.post-block img {
+  display: block; /* Делает изображение блочным элементом */
+  margin: 0 auto; /* Выравнивает по центру */
+  max-width: 100%; /* Ограничивает ширину изображения, чтобы не выходило за границы контейнера */
+  height: auto; /* Сохраняет пропорции */
+  margin-bottom: 10px;
+}
+
+.post-block p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Remove underline  */
+a {
+  text-decoration: none;
+}
+
+/* Making unique style for titles (color, font) and position */
+a {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+a {
+  display: block; /* To make element block like */
+  text-align: center;
+  margin: 10px 0; /* Gaps from above and below */
+}
+
+/* Adding effect  */
+a:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+/* Positioning whole list */
+ul {
+  text-align: center;
+  list-style-type: none; /* Removing markers for from list */
+  padding: 0;
+}
+
+.content {
+  max-width: 50%; /* Устанавливает ширину текста в 50% от ширины экрана */
+  margin: 0 auto; /* Центрирует блок по горизонтали */
+  text-align: left; /* Выровнять текст слева */
+  padding: 20px 0; /* Дополнительные отступы сверху и снизу */
+  line-height: 1.6; /* Удобный интервал между строками */
+  font-family: Arial, sans-serif; /* Укажите шрифт по умолчанию */
+  font-size: 18px; /* Размер текста */
+}
+
+.content h1 {
+  text-align: center;
+}
+
+
