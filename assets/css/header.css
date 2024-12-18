@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-direction: column; /* Размещаем элементы вертикально */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: var(--main-color); /* Текст основного цвета */
+}
+
+.header .logo-container {
+  margin-bottom: 25px; /* Отступ между логотипом и кнопками */
+}
+
+.header .logo {
+	max-width:200px; /* Size of logo */
+	height: auto;
+    margin-top: 20px; /* Gap from above */
+}
+
+.header .nav-links a {
+	text-decoration: none;  		/* Removes underline */
+	color: var(--main-color); 		/* Color of buttons */ 
+	font-family: var(--main-font); 	/* Font for buttons */
+	font-size: 18px; 			/* Size of buttons*/
+	font-weight: bold; 			/* Fat */
+	border: 2px solid #333; 		/* Frame of button */ 
+	border-radius: 5px; 			/* Rounding corners */
+	background-color: transparent; 		/* Transparent background */
+    padding: 10px 10px;             /* Внутренние отступы: сверху/снизу 10px, слева/справа 20px */
+	transition: all 0.3s ease; 		/* Animation while aiming*/
+    gap: 40px; 		/* Distance between buttons */
+    margin-top: 10px;	/* Gap under logo */
+}
+
+.header .nav-links a:hover {
+  color: var(--accent-color); /* Цвет при наведении */
+}

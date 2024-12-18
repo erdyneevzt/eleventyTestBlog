@@ -1,0 +1,75 @@
+/* Общие стили для постов */
+.post {
+  display: flex;
+  flex-direction: column;   /* Располагаем элементы вертикально */
+  align-items: center;      /* Центрируем по горизонтали */
+  margin-bottom: 40px;      /* Отступ между постами */
+  margin-top: 40px;         /* Увеличиваем расстояние между шапкой и списком */
+  background-color: transparent; /* Убираем серый фон */
+}
+
+/* Short description style */
+.post-excerpt {
+  width: 50%;         /* Ширина контейнера */
+  margin: 0 auto;     /* Центрируем сам контейнер */
+}
+
+.post-excerpt img {
+  max-width: 100%;       /* Ограничиваем ширину изображения */
+  height: auto;          /* Сохраняем пропорции */
+  margin: 0 auto;        /* Центрируем изображение */
+  display: block;        /* Убираем inline-стиль */
+}
+
+.post-excerpt p {
+  text-align: left;    /* Центрируем текст */
+  font-size: 16px;
+  color: var(--main-color);
+  margin: 0;
+  margin-top: 20px;
+}
+
+.post-title {
+  display: block;             /* Устанавливаем блочный контекст */
+  text-align: center;         /* Центрируем текст */
+  font-size: 24px;            /* Размер шрифта */
+  font-weight: bold;          /* Жирный шрифт */
+  margin-bottom: 15px;        /* Отступ под заголовком */
+  text-decoration: none;      /* Убираем подчёркивание */
+  color: var(--main-color);   /* Основной цвет текста */
+  transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.post-title:hover {
+  color: var(--accent-color); /* Цвет при наведении */
+}
+
+ul {
+  margin-top: 40px; /* Увеличиваем расстояние между шапкой и списком */
+}
+
+ul li {
+  margin-bottom: 40px; /* Увеличиваем расстояние между постами */
+}
+
+/* Содержимое поста: изображение и текст */
+.post-content {
+  width: 50%;         /* Ширина контейнера */
+  margin: 0 auto;     /* Центрируем сам контейнер */
+}
+
+.post-content img {
+  max-width: 100%;       /* Ограничиваем ширину изображения */
+  height: auto;          /* Сохраняем пропорции */
+  margin: 0 auto;        /* Центрируем изображение */
+  display: block;        /* Убираем inline-стиль */
+}
+
+.post-content p {
+  text-align: left;    /* Центрируем текст */
+  font-size: 16px;
+  color: var(--main-color);
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Увеличиваем расстояние между постами */
+}

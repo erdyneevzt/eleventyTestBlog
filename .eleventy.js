@@ -1,9 +1,7 @@
 module.exports = function(eleventyConfig) {
   // Добавление коллекции постов
  eleventyConfig.addCollection("post", function(collectionApi) {
- const posts = collectionApi.getFilteredByTag("post");
-  console.log("Посты в коллекции:", posts.map(post => post.data.title)); // Вывод в консоль
-  return posts;
+  return collectionApi.getFilteredByTag("post");
 });
 
   // Копируем папку с изображениями
@@ -19,7 +17,5 @@ module.exports = function(eleventyConfig) {
       output: "_site"     // Директория для сгенерированных файлов
     },
     htmlTemplateEngine: "njk", // Указываем Nunjucks для HTML
-    markdownTemplateEngine: "njk", // Движок для Markdown-файлов
-    dataTemplateEngine: "njk", // Движок для данных (например, YAML или JSON)
   };
 };

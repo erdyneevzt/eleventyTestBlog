@@ -1,0 +1,22 @@
+/* Reset */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Variables */
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --main-color: #333;
+  --accent-color: #0073e6;
+  --background-color: white;
+}
+
+/* Basic styles */
+body {
+  font-family: var(--main-font);
+  color: var(--main-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
