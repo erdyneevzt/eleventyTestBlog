@@ -63,6 +63,7 @@ ul li {
   height: auto;          /* Сохраняем пропорции */
   margin: 0 auto;        /* Центрируем изображение */
   display: block;        /* Убираем inline-стиль */
+  margin-bottom: 40px;    /* Отступ между постами */
 }
 
 .post-content p {
@@ -70,6 +71,31 @@ ul li {
   font-size: 16px;
   color: var(--main-color);
   margin: 0;
-  margin-top: 20px;
   margin-bottom: 20px; /* Увеличиваем расстояние между постами */
+}
+
+.post-content h1{
+  text-align: center;
+}
+
+.blog-links {
+  list-style-type: none;   /* Убираем маркеры списка */
+  padding: 0;
+  margin: 20px 0;
+  text-align: center;     /* Центрируем список */
+}
+
+.blog-links li {
+  margin-bottom: 10px;    /* Отступ между ссылками */
+}
+
+.blog-links a {
+  color: var(--accent-color);  /* Цвет ссылок */
+  text-decoration: none;       /* Убираем подчёркивание */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.blog-links a:hover {
+  text-decoration: underline;  /* Добавляем подчёркивание при наведении */
 }
