@@ -14,7 +14,7 @@
   margin: 0 auto;     /* Центрируем сам контейнер */
 }
 
-.post-excerpt img {
+.post-excerpt picture img {
   max-width: 100%;       /* Ограничиваем ширину изображения */
   height: auto;          /* Сохраняем пропорции */
   margin: 0 auto;        /* Центрируем изображение */
@@ -58,7 +58,7 @@ ul li {
   margin: 0 auto;     /* Центрируем сам контейнер */
 }
 
-.post-content img {
+.post-content picture img {
   max-width: 100%;       /* Ограничиваем ширину изображения */
   height: auto;          /* Сохраняем пропорции */
   margin: 0 auto;        /* Центрируем изображение */

@@ -1,6 +1,10 @@
 <header class="header">
     <div class="logo-container">
-        <img src="/images/LogoVersion1.png" alt="Logo" class="logo">
+        <picture>
+            <source srcset="/images/LogoVersion1.avif" type="image/avif">
+            <source srcset="/images/LogoVersion1.webp" type="image/webp">
+            <img src="/images/LogoVersion1.png" alt="Logo" class="logo" loading="lazy">
+        </picture>
     </div>
     <nav class="nav-links">
         <a href="/">Home</a>

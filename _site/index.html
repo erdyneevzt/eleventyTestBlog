@@ -12,7 +12,11 @@
 <body>
 <header class="header">
     <div class="logo-container">
-        <img src="/images/LogoVersion1.png" alt="Logo" class="logo">
+        <picture>
+            <source srcset="/images/LogoVersion1.avif" type="image/avif">
+            <source srcset="/images/LogoVersion1.webp" type="image/webp">
+            <img src="/images/LogoVersion1.png" alt="Logo" class="logo" loading="lazy">
+        </picture>
     </div>
     <nav class="nav-links">
         <a href="/">Home</a>
@@ -26,7 +30,11 @@
     <a class="post-title" href="/posts/second-post/">Копенгаген 2024</a>
     <div class="post-excerpt">
       <div>
-  <img src="/images/post2/000008.jpg" alt="First frame"/>
+  <picture>
+    <source srcset="/images/post2/000008.avif" type="image/avif">
+    <source srcset="/images/post2/000008.webp" type="image/webp">
+    <img src="/images/post2/000008.jpg" alt="First frame" loading="lazy">
+  </picture>
   <p>Мое первое путешествие в скандиновскую страну, где возможно живут счастливейшие из людей.
   </p>
 </div>
@@ -38,7 +46,11 @@
     <a class="post-title" href="/posts/first-post/">Октоберфест 2024</a>
     <div class="post-excerpt">
       <div>
-  <img src="/images/post1/000004.jpg" alt="First frame"/>
+  <picture>
+    <source srcset="/images/post1/000004.avif" type="image/avif">
+    <source srcset="/images/post1/000004.webp" type="image/webp">
+    <img src="/images/post1/000004.jpg" alt="First frame" loading="lazy">
+  </picture>
   <p>Спустя год жизни в Мюнхене, я таки попал на крупнейшее народное гуляние в мире.
   </p>
 </div>
