@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://happytrip.cc/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EZT blog</title>
+    <link>https://happytrip.cc/</link>
+    <atom:link href="https://happytrip.cc/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Personal blog of Zhargal Erdyneev.</description>
+    <language>rus</language>
+  </channel>
+</rss>

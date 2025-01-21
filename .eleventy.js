@@ -1,3 +1,5 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(eleventyConfig) {
   // Добавление коллекции постов
  eleventyConfig.addCollection("post", function(collectionApi) {
@@ -10,6 +12,8 @@ module.exports = function(eleventyConfig) {
   // Copy css styles
   eleventyConfig.addPassthroughCopy("assets");
 
+  eleventyConfig.addPlugin(pluginRss);
+  
   return {
     dir: {
       input: ".",         // Корневая директория
