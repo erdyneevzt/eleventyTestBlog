@@ -17,6 +17,9 @@ layout: "layouts/post.html"
 ---
 
 <h1 class="post-title">{{ title }}</h1>
+<p class="post-date">
+    {{ page.date | dateFormat  }}  <!-- Формат даты -->
+</p>
 <div>
   <picture>
     <source srcset="/images/post1/000004.avif" type="image/avif">

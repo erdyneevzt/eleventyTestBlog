@@ -34,7 +34,7 @@
   text-align: center;         /* Центрируем текст */
   font-size: 24px;            /* Размер шрифта */
   font-weight: bold;          /* Жирный шрифт */
-  margin-bottom: 15px;        /* Отступ под заголовком */
+  margin-bottom: 2px;        /* Отступ под заголовком */
   text-decoration: none;      /* Убираем подчёркивание */
   color: var(--main-color);   /* Основной цвет текста */
   transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
@@ -42,6 +42,20 @@
 
 .post-title:hover {
   color: var(--accent-color); /* Цвет при наведении */
+}
+
+.post-date {
+  font-size: 14px;
+  color: #666;  /* Серый цвет */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.post .post-date {
+  font-size: 14px;
+  color: #666;  /* Серый цвет */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 ul {

@@ -14,6 +14,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
   
+  // Добавляем новый фильтр для форматирования даты (убираем время)
+  const { DateTime } = require("luxon"); // Подключаем библиотеку Luxon
+
+  eleventyConfig.addFilter("dateFormat", function(date) {
+    return DateTime.fromJSDate(date).toFormat("yyyy/MM/dd"); // Формат без времени
+  });
+  
   return {
     dir: {
       input: ".",         // Корневая директория
