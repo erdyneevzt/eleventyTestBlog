@@ -1,11 +1,8 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
-  // Добавление коллекции постов
- eleventyConfig.addCollection("post", function(collectionApi) {
-  return collectionApi.getFilteredByTag("post");
-});
 
+  eleventyConfig.addCollection("post", (api) => api.getFilteredByTag("post"));
   // Копируем папку с изображениями
   eleventyConfig.addPassthroughCopy("images");
 
@@ -13,13 +10,18 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addPlugin(pluginRss);
-  
-  // Добавляем новый фильтр для форматирования даты (убираем время)
-  const { DateTime } = require("luxon"); // Подключаем библиотеку Luxon
 
-  eleventyConfig.addFilter("dateFormat", function(date) {
-    return DateTime.fromJSDate(date).toFormat("yyyy/MM/dd"); // Формат без времени
+  // ✅ Кастомный фильтр даты без Luxon
+  eleventyConfig.addFilter("dateFormat", function(date, locale = "ru-RU") {
+    const d = (date instanceof Date) ? date : new Date(date);
+    // Пример: "10 мая 2025 г."
+    return d.toLocaleDateString(locale, {
+      year: "numeric",
+      month: "long",
+      day: "2-digit"
+    });
   });
+
   
   return {
     dir: {

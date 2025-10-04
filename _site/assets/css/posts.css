@@ -1,32 +1,63 @@
+/* === Управление шириной контента === */
+:root{
+  --content-w-rem: 50rem;   /* желаемая ширина уже в rem */
+  --content-min-rem: 20rem; /* минимум */
+  --content-max-rem: 90rem; /* максимум */
+}
+
+/* ширина: не меньше минимума, стремимся к --content-w, но не больше max и не шире окна */
+.post-content,
+.post-excerpt{
+  /* запираем в рамках окна и макс-ширины */
+  width: min(100vw - 32px,
+             clamp(var(--content-min-rem),
+                   var(--content-w-rem),
+                   var(--content-max-rem)));
+  margin-inline: auto;
+  transition: width .25s ease;
+}
+
+/* Картинки и медиа растягиваются по контейнеру */
+.post-content picture,
+.post-excerpt picture,
+.post-content img,
+.post-excerpt img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  margin: 20px auto; /* ← вернули вертикальный отступ */
+  transition: width .25s ease, max-width .25s ease;
+}
+
+/* Заголовки — по центру, ТЕКСТ — слева (читаемее) */
+.post-title{ text-align:center; }
+
+.post-content p,
+.post-excerpt p{
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+  line-height: 1.65;
+  text-align: left;          /* ← ключевое: возвращаем выравнивание слева */
+  margin: 0 0 20px;
+}
+
+/* Отступы между элементами на главной */
+ul{ margin-top: 40px; }
+ul li:not(:last-child){ margin-bottom: clamp(24px, 2vw, 48px); }
+
 /* Общие стили для постов */
 .post {
   display: flex;
   flex-direction: column;   /* Располагаем элементы вертикально */
-  align-items: center;      /* Центрируем по горизонтали */
   margin-bottom: 40px;      /* Отступ между постами */
   margin-top: 40px;         /* Увеличиваем расстояние между шапкой и списком */
   background-color: transparent; /* Убираем серый фон */
 }
 
-/* Short description style */
-.post-excerpt {
-  width: 50%;         /* Ширина контейнера */
-  margin: 0 auto;     /* Центрируем сам контейнер */
-}
-
-.post-excerpt picture img {
-  max-width: 100%;       /* Ограничиваем ширину изображения */
-  height: auto;          /* Сохраняем пропорции */
-  margin: 0 auto;        /* Центрируем изображение */
-  display: block;        /* Убираем inline-стиль */
-}
-
 .post-excerpt p {
-  text-align: left;    /* Центрируем текст */
   font-size: 16px;
   color: var(--main-color);
-  margin: 0;
-  margin-top: 20px;
+  margin: 20px 0 0;
 }
 
 .post-title {
@@ -44,18 +75,15 @@
   color: var(--accent-color); /* Цвет при наведении */
 }
 
-.post-date {
-  font-size: 14px;
-  color: #666;  /* Серый цвет */
-  margin-bottom: 20px;
+/* центрируем дату и в списке, и внутри .post */
+.post-date,
+.post .post-date,
+ul li .post-date {
   text-align: center;
-}
-
-.post .post-date {
+  display: block;
+  margin: 0 0 20px;
   font-size: 14px;
-  color: #666;  /* Серый цвет */
-  margin-bottom: 20px;
-  text-align: center;
+  color: #666;
 }
 
 ul {
@@ -66,27 +94,10 @@ ul li {
   margin-bottom: 40px; /* Увеличиваем расстояние между постами */
 }
 
-/* Содержимое поста: изображение и текст */
-.post-content {
-  width: 50%;         /* Ширина контейнера */
-  margin: 0 auto;     /* Центрируем сам контейнер */
-}
-
-.post-content picture img {
-  max-width: 100%;       /* Ограничиваем ширину изображения */
-  height: auto;          /* Сохраняем пропорции */
-  margin: 0 auto;        /* Центрируем изображение */
-  display: block;        /* Убираем inline-стиль */
-  margin-top: 20px;
-  margin-bottom: 20px;    /* Отступ между постами */
-}
-
 .post-content p {
-  text-align: left;    /* Центрируем текст */
   font-size: 16px;
   color: var(--main-color);
-  margin: 0;
-  margin-bottom: 20px; /* Увеличиваем расстояние между постами */
+  margin: 0 0 20px;
 }
 
 .post-content h1{

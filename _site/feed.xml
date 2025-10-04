@@ -1,10 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://happytrip.cc/" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0">
   <channel>
     <title>EZT blog</title>
     <link>https://happytrip.cc/</link>
-    <atom:link href="https://happytrip.cc/feed.xml" rel="self" type="application/rss+xml" />
     <description>Personal blog of Zhargal Erdyneev.</description>
-    <language>rus</language>
+    <language>ru-RU</language>
+
+    
+      <lastBuildDate>Sat, 04 Oct 2025 24:00:00 GMT</lastBuildDate>
+    
+
+    
+      
+      
+      
+      
+
+      <item>
+        <title>Дневник фотонаблюдений, май-июль 2025</title>
+        <link>https://happytrip.cc/posts/fivth-post/</link>
+        <guid>https://happytrip.cc/posts/fivth-post/</guid>
+        <pubDate>Sat, 04 Oct 2025 24:00:00 GMT</pubDate>
+        <description>Первый организованный мной хайкинг на водопад Lainbach Falls. Айбзее или Немецкие Мальдивы. Долина Оберстдорф. Одиночный поход в ущелье Hoelentellklamm. Первый визит в Гамбург.</description>
+      </item>
+    
+      
+      
+      
+      
+
+      <item>
+        <title>Дневник фотонаблюдений, февраль-апрель 2025</title>
+        <link>https://happytrip.cc/posts/fourth-post/</link>
+        <guid>https://happytrip.cc/posts/fourth-post/</guid>
+        <pubDate>Sat, 10 May 2025 24:00:00 GMT</pubDate>
+        <description>Экскурсия в Нюрнберге. Фотопрогулка в Мюнхене. Первый визит в Португалию. Совместный отпуск с родителями в Алматы.</description>
+      </item>
+    
+      
+      
+      
+      
+
+      <item>
+        <title>Новый год в Сербии 2024-2025</title>
+        <link>https://happytrip.cc/posts/third-post/</link>
+        <guid>https://happytrip.cc/posts/third-post/</guid>
+        <pubDate>Fri, 31 Jan 2025 24:00:00 GMT</pubDate>
+        <description>Как я встретил новый 2025-й год в Сербии.</description>
+      </item>
+    
+      
+      
+      
+      
+
+      <item>
+        <title>Копенгаген 2024</title>
+        <link>https://happytrip.cc/posts/second-post/</link>
+        <guid>https://happytrip.cc/posts/second-post/</guid>
+        <pubDate>Tue, 07 Jan 2025 24:00:00 GMT</pubDate>
+        <description>Мое первое путешествие в скандиновскую страну, где возможно живут счастливейшие из людей.</description>
+      </item>
+    
+      
+      
+      
+      
+
+      <item>
+        <title>Октоберфест 2024</title>
+        <link>https://happytrip.cc/posts/first-post/</link>
+        <guid>https://happytrip.cc/posts/first-post/</guid>
+        <pubDate>Mon, 06 Jan 2025 24:00:00 GMT</pubDate>
+        <description>Спустя год жизни в Мюнхене, я таки попал на крупнейшее народное гуляние в мире.</description>
+      </item>
+    
   </channel>
 </rss>

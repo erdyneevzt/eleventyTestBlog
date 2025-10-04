@@ -1,32 +1,40 @@
 ---
-permalink: "feed.xml"
+permalink: "/feed.xml"
 eleventyExcludeFromCollections: true
 metadata:
-  language: "rus"
   title: "EZT blog"
   description: "Personal blog of Zhargal Erdyneev."
-  base: "https://happytrip.cc/"
+  base: "https://happytrip.cc"   # без завершающего слэша
+  language: "ru-RU"
   author:
     name: "Zhargal Erdyneev"
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.base | addPathPrefixToFullUrl }}" xmlns:atom="http://www.w3.org/2005/Atom">
+
+{{- '<?xml version="1.0" encoding="utf-8"?>' | safe }}
+<rss version="2.0">
   <channel>
     <title>{{ metadata.title }}</title>
-    <link>{{ metadata.base | addPathPrefixToFullUrl }}</link>
-    <atom:link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" type="application/rss+xml" />
+    <link>{{ metadata.base }}/</link>
     <description>{{ metadata.description }}</description>
-    <language>{{ metadata.language or page.lang }}</language>
-    {%- for post in collections.posts | reverse %}
-    {%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.base) %}
-    <item>
-      <title>{{ post.data.title }}</title>
-      <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.content | renderTransforms(post.data.page, metadata.base) }}</description>
-      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
-      <guid>{{ absolutePostUrl }}</guid>
-    </item>
-    {%- endfor %}
+    <language>{{ metadata.language }}</language>
+
+    {% if collections.post and collections.post | length %}
+      <lastBuildDate>{{ (collections.post | last).date | dateToRfc822 }}</lastBuildDate>
+    {% endif %}
+
+    {% for post in collections.post | reverse %}
+      {% set abs = post.url | htmlBaseUrl(metadata.base) %}
+      {% set raw = post.data.excerpt or post.templateContent %}
+      {# Готовим безопасное текстовое описание #}
+      {% set text = raw | striptags | trim %}
+
+      <item>
+        <title>{{ post.data.title | safe }}</title>
+        <link>{{ abs }}</link>
+        <guid>{{ abs }}</guid>
+        <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+        <description>{{ text | escape }}</description>
+      </item>
+    {% endfor %}
   </channel>
 </rss>
