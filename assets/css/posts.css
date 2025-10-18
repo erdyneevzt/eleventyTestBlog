@@ -37,8 +37,9 @@
 .post-excerpt p{
   font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
   line-height: 1.65;
-  text-align: left;          /* ← ключевое: возвращаем выравнивание слева */
+  text-align: justify;          /* ← ключевое: возвращаем выравнивание слева */
   margin: 0 0 20px;
+  text-justify: inter-word;
 }
 
 /* Отступы между элементами на главной */
